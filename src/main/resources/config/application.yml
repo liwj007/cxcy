@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: local
+  # swagger config
+  swagger:
+    # 需要生成api的controller所在包
+    basePackage: com.xdbigdata.cxcy.web.controller
+
+
+# define logback config location
+logging:
+  config: classpath:config/logback-spring.xml
+  level:
+    root: error
+
+# mybatis config
+mybatis:
+  type-aliases-package: com.xdbigdata.cxcy.model.domain
+  mapper-locations: classpath*:mapper/*Mapper.xml
+
+# framework-web
+web:
+  enabled:
+    # 开启Controller全局异常处理
+    globalExceptionHandler: true
+    # 开启Controller日志
+    logAspect: true

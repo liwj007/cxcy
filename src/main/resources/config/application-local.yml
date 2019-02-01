@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    # alibaba druid datasource config
+    druid:
+      url: 
+      username: 
+      password:
+  # framework-swagger 
+  swagger:
+    enabled: true
+
+# logback config
+logging:
+  level:
+    com.xdbigdata.framework: info
+    com.xdbigdata.cxcy: debug
