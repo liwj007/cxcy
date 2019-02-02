@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.ProjectReportMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.ProjectReport">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="category" jdbcType="INTEGER" property="category" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="file" jdbcType="VARCHAR" property="file" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, category, create_date, file, create_user_id
+  </sql>
+</mapper>

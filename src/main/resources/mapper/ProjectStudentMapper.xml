@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.ProjectStudentMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.ProjectStudent">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_no" jdbcType="INTEGER" property="userNo" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="college_name" jdbcType="VARCHAR" property="collegeName" />
+    <result column="major_name" jdbcType="VARCHAR" property="majorName" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="project_id" jdbcType="INTEGER" property="projectId" />
+    <result column="identity" jdbcType="BIT" property="identity" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, user_id, user_no, user_name, college_name, major_name, phone, email, project_id, 
+    identity
+  </sql>
+</mapper>

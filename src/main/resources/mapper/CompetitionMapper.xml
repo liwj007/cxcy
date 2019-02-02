@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.CompetitionMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.Competition">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="comp_type_id" jdbcType="INTEGER" property="compTypeId" />
+    <result column="comp_level_id" jdbcType="INTEGER" property="compLevelId" />
+    <result column="comp_category_id" jdbcType="INTEGER" property="compCategoryId" />
+    <result column="form" jdbcType="BIT" property="form" />
+    <result column="upper_limit" jdbcType="INTEGER" property="upperLimit" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="enroll_begin_date" jdbcType="TIMESTAMP" property="enrollBeginDate" />
+    <result column="enroll_end_date" jdbcType="TIMESTAMP" property="enrollEndDate" />
+    <result column="comp_begin_date" jdbcType="TIMESTAMP" property="compBeginDate" />
+    <result column="comp_end_date" jdbcType="TIMESTAMP" property="compEndDate" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="publish_status" jdbcType="INTEGER" property="publishStatus" />
+    <result column="publish_date" jdbcType="TIMESTAMP" property="publishDate" />
+    <result column="check_status" jdbcType="INTEGER" property="checkStatus" />
+    <result column="check_user_id" jdbcType="INTEGER" property="checkUserId" />
+    <result column="check_user_name" jdbcType="VARCHAR" property="checkUserName" />
+    <result column="check_user_no" jdbcType="VARCHAR" property="checkUserNo" />
+    <result column="check_date" jdbcType="TIMESTAMP" property="checkDate" />
+    <result column="check_opinion" jdbcType="VARCHAR" property="checkOpinion" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="create_type" jdbcType="BIT" property="createType" />
+    <result column="create_college" jdbcType="VARCHAR" property="createCollege" />
+    <result column="summary_date" jdbcType="TIMESTAMP" property="summaryDate" />
+    <result column="summary_user_id" jdbcType="INTEGER" property="summaryUserId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.xdbigdata.cxcy.model.domain.Competition">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, title, comp_type_id, comp_level_id, comp_category_id, form, upper_limit, unit, 
+    enroll_begin_date, enroll_end_date, comp_begin_date, comp_end_date, address, publish_status, 
+    publish_date, check_status, check_user_id, check_user_name, check_user_no, check_date, 
+    check_opinion, create_user_id, create_date, create_type, create_college, summary_date, 
+    summary_user_id
+  </sql>
+  <sql id="Blob_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    summary
+  </sql>
+</mapper>

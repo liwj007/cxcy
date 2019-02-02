@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.NewsLogMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.NewsLog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="action" jdbcType="VARCHAR" property="action" />
+    <result column="action_date" jdbcType="TIMESTAMP" property="actionDate" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_no" jdbcType="VARCHAR" property="userNo" />
+    <result column="section" jdbcType="VARCHAR" property="section" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, action, action_date, content, user_id, user_name, user_no, section
+  </sql>
+</mapper>

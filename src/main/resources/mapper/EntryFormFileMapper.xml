@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.EntryFormFileMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.EntryFormFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="entry_form_id" jdbcType="INTEGER" property="entryFormId" />
+    <result column="file" jdbcType="VARCHAR" property="file" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, entry_form_id, file
+  </sql>
+</mapper>

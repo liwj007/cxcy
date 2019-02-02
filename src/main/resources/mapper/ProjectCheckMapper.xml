@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.ProjectCheckMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.ProjectCheck">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="process_template_id" jdbcType="INTEGER" property="processTemplateId" />
+    <result column="project_id" jdbcType="INTEGER" property="projectId" />
+    <result column="node_template_id" jdbcType="INTEGER" property="nodeTemplateId" />
+    <result column="check_status" jdbcType="INTEGER" property="checkStatus" />
+    <result column="check_date" jdbcType="TIMESTAMP" property="checkDate" />
+    <result column="check_user_name" jdbcType="VARCHAR" property="checkUserName" />
+    <result column="check_user_no" jdbcType="VARCHAR" property="checkUserNo" />
+    <result column="check_user_id" jdbcType="INTEGER" property="checkUserId" />
+    <result column="check_opinion" jdbcType="VARCHAR" property="checkOpinion" />
+    <result column="next_step_id" jdbcType="INTEGER" property="nextStepId" />
+    <result column="prev_step_id" jdbcType="INTEGER" property="prevStepId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, process_template_id, project_id, node_template_id, check_status, check_date, 
+    check_user_name, check_user_no, check_user_id, check_opinion, next_step_id, prev_step_id
+  </sql>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.EntryFormStudentMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.EntryFormStudent">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="entry_form_id" jdbcType="INTEGER" property="entryFormId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_no" jdbcType="VARCHAR" property="userNo" />
+    <result column="user_college" jdbcType="VARCHAR" property="userCollege" />
+    <result column="user_major" jdbcType="VARCHAR" property="userMajor" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="identity" jdbcType="BIT" property="identity" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, entry_form_id, user_id, user_name, user_no, user_college, user_major, phone, 
+    email, identity
+  </sql>
+</mapper>

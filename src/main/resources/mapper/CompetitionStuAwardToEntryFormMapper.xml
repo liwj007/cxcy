@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.CompetitionStuAwardToEntryFormMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.CompetitionStuAwardToEntryForm">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="comp_stu_award_id" jdbcType="INTEGER" property="compStuAwardId" />
+    <id column="entry_form_id" jdbcType="INTEGER" property="entryFormId" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    comp_stu_award_id, entry_form_id, create_date, create_user_id
+  </sql>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.EntryReviewOpinionMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.EntryReviewOpinion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="judge_name" jdbcType="VARCHAR" property="judgeName" />
+    <result column="score" jdbcType="DOUBLE" property="score" />
+    <result column="opinion" jdbcType="VARCHAR" property="opinion" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+    <result column="entry_review_id" jdbcType="INTEGER" property="entryReviewId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, judge_name, score, opinion, create_time, create_user_id, entry_review_id
+  </sql>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="no" jdbcType="VARCHAR" property="no" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="logintime" jdbcType="TIMESTAMP" property="logintime" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="expire" jdbcType="INTEGER" property="expire" />
+    <result column="college" jdbcType="VARCHAR" property="college" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="identity" jdbcType="VARCHAR" property="identity" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, username, no, pwd, logintime, createtime, pic, token, expire, college, major, 
+    grade, identity
+  </sql>
+</mapper>

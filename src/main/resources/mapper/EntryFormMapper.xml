@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.EntryFormMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.EntryForm">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="comp_id" jdbcType="INTEGER" property="compId" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+    <result column="reason" jdbcType="VARCHAR" property="reason" />
+    <result column="enroll_status" jdbcType="INTEGER" property="enrollStatus" />
+    <result column="check_opinion" jdbcType="VARCHAR" property="checkOpinion" />
+    <result column="check_date" jdbcType="TIMESTAMP" property="checkDate" />
+    <result column="check_user_id" jdbcType="INTEGER" property="checkUserId" />
+    <result column="check_user_name" jdbcType="VARCHAR" property="checkUserName" />
+    <result column="check_user_no" jdbcType="VARCHAR" property="checkUserNo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, comp_id, create_date, create_user_id, reason, enroll_status, check_opinion, check_date, 
+    check_user_id, check_user_name, check_user_no
+  </sql>
+</mapper>

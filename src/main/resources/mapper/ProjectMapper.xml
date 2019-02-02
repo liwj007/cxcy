@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdbigdata.cxcy.mapper.ProjectMapper">
+  <resultMap id="BaseResultMap" type="com.xdbigdata.cxcy.model.domain.Project">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="no" jdbcType="VARCHAR" property="no" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="college_id" jdbcType="VARCHAR" property="collegeId" />
+    <result column="subject_code" jdbcType="VARCHAR" property="subjectCode" />
+    <result column="apply_reason" jdbcType="VARCHAR" property="applyReason" />
+    <result column="middle_status" jdbcType="INTEGER" property="middleStatus" />
+    <result column="final_status" jdbcType="INTEGER" property="finalStatus" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="approval_process_id" jdbcType="INTEGER" property="approvalProcessId" />
+    <result column="middle_process_id" jdbcType="INTEGER" property="middleProcessId" />
+    <result column="final_process_id" jdbcType="INTEGER" property="finalProcessId" />
+    <result column="approval_status" jdbcType="INTEGER" property="approvalStatus" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.xdbigdata.cxcy.model.domain.Project">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="background" jdbcType="LONGVARCHAR" property="background" />
+    <result column="plan" jdbcType="LONGVARCHAR" property="plan" />
+    <result column="schedule" jdbcType="LONGVARCHAR" property="schedule" />
+    <result column="innovation" jdbcType="LONGVARCHAR" property="innovation" />
+    <result column="budget" jdbcType="LONGVARCHAR" property="budget" />
+    <result column="achievement" jdbcType="LONGVARCHAR" property="achievement" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    no, name, college_id, subject_code, apply_reason, middle_status, final_status, status, 
+    approval_process_id, middle_process_id, final_process_id, approval_status
+  </sql>
+  <sql id="Blob_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    background, plan, schedule, innovation, budget, achievement
+  </sql>
+</mapper>
