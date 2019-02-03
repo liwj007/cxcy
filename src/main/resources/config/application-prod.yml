@@ -2,9 +2,9 @@ spring:
   datasource:
     # alibaba druid datasource config
     druid:
-      url: 
-      username: 
-      password:
+      url: jdbc:mysql://localhost:3306/cxcy?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: lwj000720
   # framework-swagger 
   swagger:
     enabled: false

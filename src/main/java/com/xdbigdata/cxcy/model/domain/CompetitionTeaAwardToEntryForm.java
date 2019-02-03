@@ -5,6 +5,10 @@ import javax.persistence.*;
 
 @Table(name = "competition_tea_award_to_entry_form")
 public class CompetitionTeaAwardToEntryForm {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @Column(name = "comp_tea_award_id")
     private Integer compTeaAwardId;
 
@@ -16,6 +20,20 @@ public class CompetitionTeaAwardToEntryForm {
 
     @Column(name = "create_user_id")
     private Integer createUserId;
+
+    /**
+     * @return id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     /**
      * @return comp_tea_award_id
@@ -79,6 +97,7 @@ public class CompetitionTeaAwardToEntryForm {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
         sb.append(", compTeaAwardId=").append(compTeaAwardId);
         sb.append(", entryFormId=").append(entryFormId);
         sb.append(", createDate=").append(createDate);
