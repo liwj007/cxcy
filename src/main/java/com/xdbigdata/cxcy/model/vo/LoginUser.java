@@ -23,6 +23,9 @@ public class LoginUser {
             this.major=user.getMajor();
             this.grade=user.getGrade();
         }
+        if ((user.getIdentity().equals(UserIdentity.USER_IDENTITY_COLLEGE))){
+            this.college=user.getCollege();
+        }
         this.pic=user.getPic();
     }
 

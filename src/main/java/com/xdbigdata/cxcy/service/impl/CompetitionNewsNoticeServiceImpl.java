@@ -9,6 +9,8 @@ import com.xdbigdata.cxcy.service.CompetitionNewsNoticeService;
 import lombok.extern.slf4j.Slf4j;
 import com.xdbigdata.framework.service.BaseServiceImpl;
 
+import java.util.List;
+
 /**
  * CompetitionNewsNotice service implement
  * 
@@ -19,4 +21,8 @@ import com.xdbigdata.framework.service.BaseServiceImpl;
 public class CompetitionNewsNoticeServiceImpl extends BaseServiceImpl<CompetitionNewsNotice, CompetitionNewsNoticeMapper> implements CompetitionNewsNoticeService {
 
 
+    @Override
+    public void addNotice(String title, String content, List<String> files) {
+
+    }
 }
