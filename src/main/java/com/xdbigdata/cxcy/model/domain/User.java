@@ -58,7 +58,7 @@ public class User {
     private String grade;
 
     /**
-     * 身份：学院用户/学校用户
+     * 身份：学生用户/学院用户/学校用户
      */
     private String identity;
 
@@ -267,18 +267,18 @@ public class User {
     }
 
     /**
-     * 获取身份：学院用户/学校用户
+     * 获取身份：学生用户/学院用户/学校用户
      *
-     * @return identity - 身份：学院用户/学校用户
+     * @return identity - 身份：学生用户/学院用户/学校用户
      */
     public String getIdentity() {
         return identity;
     }
 
     /**
-     * 设置身份：学院用户/学校用户
+     * 设置身份：学生用户/学院用户/学校用户
      *
-     * @param identity 身份：学院用户/学校用户
+     * @param identity 身份：学生用户/学院用户/学校用户
      */
     public void setIdentity(String identity) {
         this.identity = identity;
