@@ -10,11 +10,25 @@
     <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
     <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
     <result column="category" jdbcType="INTEGER" property="category" />
+    <result column="comp_id" jdbcType="INTEGER" property="compId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.xdbigdata.cxcy.model.domain.CompetitionNews">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    id, title, create_user_id, create_date, category
+    id, title, create_user_id, create_date, category, comp_id, type
+  </sql>
+  <sql id="Blob_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    content
   </sql>
 </mapper>

@@ -25,6 +25,16 @@ public class CompetitionNews {
      */
     private Integer category;
 
+    @Column(name = "comp_id")
+    private Integer compId;
+
+    /**
+     * 类型：0总结公示，1获奖公示
+     */
+    private Integer type;
+
+    private String content;
+
     /**
      * @return id
      */
@@ -103,6 +113,52 @@ public class CompetitionNews {
         this.category = category;
     }
 
+    /**
+     * @return comp_id
+     */
+    public Integer getCompId() {
+        return compId;
+    }
+
+    /**
+     * @param compId
+     */
+    public void setCompId(Integer compId) {
+        this.compId = compId;
+    }
+
+    /**
+     * 获取类型：0总结公示，1获奖公示
+     *
+     * @return type - 类型：0总结公示，1获奖公示
+     */
+    public Integer getType() {
+        return type;
+    }
+
+    /**
+     * 设置类型：0总结公示，1获奖公示
+     *
+     * @param type 类型：0总结公示，1获奖公示
+     */
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return content;
+    }
+
+    /**
+     * @param content
+     */
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -114,6 +170,9 @@ public class CompetitionNews {
         sb.append(", createUserId=").append(createUserId);
         sb.append(", createDate=").append(createDate);
         sb.append(", category=").append(category);
+        sb.append(", compId=").append(compId);
+        sb.append(", type=").append(type);
+        sb.append(", content=").append(content);
         sb.append("]");
         return sb.toString();
     }
