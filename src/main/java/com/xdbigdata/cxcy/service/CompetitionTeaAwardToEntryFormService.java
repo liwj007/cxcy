@@ -3,7 +3,10 @@ package com.xdbigdata.cxcy.service;
 import com.xdbigdata.cxcy.mapper.CompetitionTeaAwardToEntryFormMapper;
 import com.xdbigdata.cxcy.model.domain.CompetitionTeaAwardToEntryForm;
 
+import com.xdbigdata.cxcy.model.domain.CompetitionTeacherAward;
 import com.xdbigdata.framework.service.BaseService;
+
+import java.util.List;
 
 /**
  * CompetitionTeaAwardToEntryForm service interface
@@ -12,4 +15,5 @@ import com.xdbigdata.framework.service.BaseService;
  */
 public interface CompetitionTeaAwardToEntryFormService extends BaseService<CompetitionTeaAwardToEntryForm, CompetitionTeaAwardToEntryFormMapper> {
 
+    void addTeacherAward(CompetitionTeacherAward teacherAward, List<Integer> teamIds);
 }

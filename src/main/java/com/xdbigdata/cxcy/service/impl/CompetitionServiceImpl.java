@@ -2,16 +2,15 @@ package com.xdbigdata.cxcy.service.impl;
 
 import com.xdbigdata.cxcy.constant.Constant;
 import com.xdbigdata.cxcy.constant.UserIdentity;
-import com.xdbigdata.cxcy.model.domain.CompetitionFile;
-import com.xdbigdata.cxcy.model.domain.CompetitionNewsNotice;
-import com.xdbigdata.cxcy.model.domain.User;
+import com.xdbigdata.cxcy.model.domain.*;
+import com.xdbigdata.cxcy.model.vo.EntryFormVO;
 import com.xdbigdata.cxcy.service.CompetitionFileService;
+import com.xdbigdata.cxcy.service.CompetitionSummaryFileService;
 import com.xdbigdata.framework.web.utils.SessionUserUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.xdbigdata.cxcy.mapper.CompetitionMapper;
-import com.xdbigdata.cxcy.model.domain.Competition;
 import com.xdbigdata.cxcy.service.CompetitionService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +30,9 @@ public class CompetitionServiceImpl extends BaseServiceImpl<Competition, Competi
 
     @Autowired
     public CompetitionFileService competitionFileService;
+
+    @Autowired
+    public CompetitionSummaryFileService competitionSummaryFileService;
 
 
     @Override
@@ -101,5 +103,22 @@ public class CompetitionServiceImpl extends BaseServiceImpl<Competition, Competi
         this.update(competition);
     }
 
+    @Override
+    public void summary(Integer compId, String content, List<String> files) {
+        Competition competition = this.get(compId);
+        if (competition==null)
+            return;
+        competition.setSummary(content);
+        competition.setSummaryDate(new Date());
+        User u = SessionUserUtils.getUserInSession(User.class);
+        competition.setSummaryUserId(u.getId());
+        this.update(competition);
 
+        for (String file: files){
+            CompetitionSummaryFile summaryFile = new CompetitionSummaryFile();
+            summaryFile.setCompId(compId);
+            summaryFile.setFile(file);
+            competitionSummaryFileService.insert(summaryFile);
+        }
+    }
 }

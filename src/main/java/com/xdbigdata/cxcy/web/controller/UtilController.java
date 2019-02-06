@@ -1,5 +1,8 @@
 package com.xdbigdata.cxcy.web.controller;
 
+import com.xdbigdata.cxcy.model.vo.StudentVO;
+import com.xdbigdata.cxcy.model.vo.TeacherVO;
+import com.xdbigdata.cxcy.service.UserService;
 import com.xdbigdata.framework.web.enums.ResponseContentType;
 import com.xdbigdata.framework.web.model.JsonResponse;
 import com.xdbigdata.framework.web.utils.DownloadUtils;
@@ -20,6 +23,9 @@ import java.util.Calendar;
 public class UtilController {
 
     String filePath = "/Users/liwenjun/Documents/files/";
+
+    @Autowired
+    public UserService userService;
 
     @RequestMapping(value = "/upload_file", method = RequestMethod.POST)
     public JsonResponse uploadFile(@RequestParam(value = "file") MultipartFile file) {
@@ -42,7 +48,17 @@ public class UtilController {
         DownloadUtils.download(file,null,filePath+file,response);
     }
 
+    @RequestMapping(value = "/get_student_info", method = RequestMethod.GET)
+    public JsonResponse getStudentInfo(@RequestParam(value = "no") String no) {
+        StudentVO vo = userService.searchStudent(no);
+        return JsonResponse.success(vo);
+    }
 
+    @RequestMapping(value = "/get_teacher_info", method = RequestMethod.GET)
+    public JsonResponse getTeacherInfo(@RequestParam(value = "no") String no) {
+        TeacherVO vo = userService.searchTeacher(no);
+        return JsonResponse.success(vo);
+    }
 
     private String generateRandomFilename() {
         String fourRandom = "";

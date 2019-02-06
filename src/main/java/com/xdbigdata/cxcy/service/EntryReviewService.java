@@ -12,4 +12,9 @@ import com.xdbigdata.framework.service.BaseService;
  */
 public interface EntryReviewService extends BaseService<EntryReview, EntryReviewMapper> {
 
+    void addReviewFinalPart(Integer eid, String res, double score, String opinion);
+
+    void addReviewFilePart(Integer eid, String file);
+
+    void addReviewOpinionPart(Integer eid, String name, double score, String opinion);
 }

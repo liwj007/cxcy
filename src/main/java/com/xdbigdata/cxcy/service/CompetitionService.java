@@ -3,6 +3,7 @@ package com.xdbigdata.cxcy.service;
 import com.xdbigdata.cxcy.mapper.CompetitionMapper;
 import com.xdbigdata.cxcy.model.domain.Competition;
 
+import com.xdbigdata.cxcy.model.vo.EntryFormVO;
 import com.xdbigdata.framework.service.BaseService;
 
 import java.util.Date;
@@ -20,4 +21,5 @@ public interface CompetitionService extends BaseService<Competition, Competition
     void check(Integer id, String res,String opinion);
 
 
+    void summary(Integer compId, String content, List<String> files);
 }

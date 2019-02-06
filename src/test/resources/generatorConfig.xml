@@ -33,7 +33,7 @@
 		<javaClientGenerator targetPackage="${generator.targetMapperPackage}"
 			targetProject="${generator.targetJavaProject}" type="XMLMAPPER" />
 
-		<table tableName="%" enableCountByExample="false" 
+		<table tableName="competition_news_file" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false">
 			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
